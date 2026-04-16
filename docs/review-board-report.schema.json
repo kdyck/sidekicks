@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Review Board Report",
+  "type": "object",
+  "required": ["runId", "reviewType", "classificationRationale", "panel", "lensVerdicts", "summary"],
+  "properties": {
+    "runId": { "type": "string" },
+    "reviewType": {
+      "type": "string",
+      "enum": ["Feature", "Architecture", "Security", "Performance", "UX/Accessibility", "AI/ML", "Legal/Compliance", "Agent", "Full"]
+    },
+    "classificationRationale": { "type": "string" },
+    "panel": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "lensVerdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["lens", "verdict", "assessment", "concerns", "handoffs"],
+        "properties": {
+          "lens": { "type": "string" },
+          "verdict": { "type": "string", "enum": ["APPROVE", "FLAG", "BLOCK"] },
+          "assessment": { "type": "string" },
+          "concerns": { "type": "array", "items": { "type": "string" } },
+          "handoffs": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["blockers", "flags", "approvals", "unresolvedHandoffs", "recommendation"],
+      "properties": {
+        "blockers": { "type": "array", "items": { "type": "string" } },
+        "flags": { "type": "array", "items": { "type": "string" } },
+        "approvals": { "type": "array", "items": { "type": "string" } },
+        "unresolvedHandoffs": { "type": "array", "items": { "type": "string" } },
+        "recommendation": { "type": "string", "enum": ["SHIP", "SHIP WITH CONDITIONS", "HOLD"] }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

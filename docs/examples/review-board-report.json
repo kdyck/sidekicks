@@ -1,0 +1,43 @@
+{
+  "runId": "example",
+  "reviewType": "Feature",
+  "classificationRationale": "New user-facing skill with no cross-cutting architectural impact.",
+  "panel": ["Engineering", "UX/Accessibility", "Security", "Performance"],
+  "lensVerdicts": [
+    {
+      "lens": "Engineering",
+      "verdict": "APPROVE",
+      "assessment": "Skill follows existing contract patterns. Frontmatter and output paths are correct.",
+      "concerns": [],
+      "handoffs": []
+    },
+    {
+      "lens": "UX/Accessibility",
+      "verdict": "APPROVE",
+      "assessment": "No user-facing UI changes. Skill output is developer-facing markdown.",
+      "concerns": [],
+      "handoffs": []
+    },
+    {
+      "lens": "Security",
+      "verdict": "APPROVE",
+      "assessment": "No secrets, credentials, or auth-related changes detected.",
+      "concerns": [],
+      "handoffs": []
+    },
+    {
+      "lens": "Performance",
+      "verdict": "APPROVE",
+      "assessment": "No latency-sensitive paths introduced.",
+      "concerns": [],
+      "handoffs": []
+    }
+  ],
+  "summary": {
+    "blockers": [],
+    "flags": [],
+    "approvals": ["Engineering", "UX/Accessibility", "Security", "Performance"],
+    "unresolvedHandoffs": [],
+    "recommendation": "SHIP"
+  }
+}
