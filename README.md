@@ -17,33 +17,11 @@ No work moves forward with an unresolved BLOCK.
 
 ## Installation
 
-Sidekicks is not yet on a plugin marketplace. Install directly from GitHub using the instructions for your platform.
-
 ### Claude Code
 
 ```text
 /install-github-skill kdyck/sidekicks
 ```
-
-### GitHub Copilot CLI
-
-```text
-copilot plugin install kdyck/sidekicks
-```
-
-### Gemini CLI
-
-```text
-gemini extensions install https://github.com/kdyck/sidekicks
-```
-
-### OpenAI Codex CLI
-
-```text
-/plugins
-```
-
-Search for "sidekicks" or add from GitHub.
 
 ### Manual
 
@@ -52,6 +30,8 @@ Clone the repository and symlink or copy the `skills/` directory into your proje
 ```text
 git clone https://github.com/kdyck/sidekicks.git
 ```
+
+Support for additional platforms (Copilot CLI, Gemini CLI, Codex CLI) is planned.
 
 ## What's Inside
 
