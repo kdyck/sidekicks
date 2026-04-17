@@ -23,6 +23,26 @@ No work moves forward with an unresolved BLOCK.
 /install-github-skill kdyck/sidekicks
 ```
 
+### GitHub Copilot CLI
+
+```text
+copilot plugin install kdyck/sidekicks
+```
+
+### Gemini CLI
+
+```text
+gemini extensions install https://github.com/kdyck/sidekicks
+```
+
+### OpenAI Codex CLI
+
+```text
+codex /plugins
+```
+
+Search for "sidekicks" and select "Install plugin".
+
 ### Manual
 
 Clone the repository and symlink or copy the `skills/` directory into your project:
@@ -30,8 +50,6 @@ Clone the repository and symlink or copy the `skills/` directory into your proje
 ```text
 git clone https://github.com/kdyck/sidekicks.git
 ```
-
-Support for additional platforms (Copilot CLI, Gemini CLI, Codex CLI) is planned.
 
 ## What's Inside
 
