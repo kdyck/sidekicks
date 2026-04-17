@@ -2,20 +2,20 @@
 
 ## Purpose
 
-Sidekick skills provide structured review and safety gates for completed work. Each skill applies domain-specific evaluation criteria and produces structured output.
+Sidekick skills provide structured review and safety gates for work output at any phase — brainstorming, planning, design, architecture, or implementation. Each skill applies domain-specific evaluation criteria and produces structured output.
 
 ## Current Skills
 
 ### review-board
 
-Multi-lens review gate. Classifies a change, selects a panel of review lenses, applies each lens to produce a verdict (APPROVE / FLAG / BLOCK), and synthesizes a final recommendation (SHIP / SHIP WITH CONDITIONS / HOLD).
+Multi-lens review gate for any phase of work. Classifies the work output, selects a panel of review lenses, applies each lens to produce a verdict (APPROVE / FLAG / BLOCK), and synthesizes a final recommendation (SHIP / SHIP WITH CONDITIONS / HOLD).
 
-The Security lens includes secret scanning — inspecting changed files for hardcoded keys, tokens, passwords, and credentials.
+The Security lens includes secret scanning — inspecting work artifacts for hardcoded keys, tokens, passwords, and credentials.
 
 ## Control Flow
 
-1. Complete implementation work.
-2. `review-board` classifies the change, applies the relevant lens panel, and produces a structured report and human-readable summary.
+1. Complete a phase of work (brainstorm, plan, design, or implementation).
+2. `review-board` classifies the work output, applies the relevant lens panel, and produces a structured report and human-readable summary.
 3. If the recommendation is HOLD, work stops until all BLOCKs are resolved.
 
 ## Contracts

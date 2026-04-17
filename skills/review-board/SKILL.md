@@ -1,22 +1,22 @@
 ---
 name: review-board
-description: Use when completed changes need multi-perspective review before finalization
+description: Use when completed work output needs multi-perspective review before moving forward
 ---
 
 # Review Board
 
 ## Overview
 
-Single-pass multi-lens review of completed changes. Classifies the change, selects an ordered panel of review lenses, applies each lens to produce a verdict, then synthesizes a final recommendation.
+Single-pass multi-lens review of completed work output at any phase — brainstorming, planning, design, architecture, or implementation. Classifies the work, selects an ordered panel of review lenses, applies each lens to produce a verdict, then synthesizes a final recommendation.
 
 ## Inputs
 
-- changed files (completed, post-implementation)
+- work artifact: brainstorm output, plan, design doc, architecture decision, spec, or changed files
 - task description or acceptance criteria
 
 ## Step 1: Classify
 
-Inspect the changed files and task context. Select the single best-fit review type:
+Inspect the work artifact and task context. Select the single best-fit review type:
 
 | Type | When |
 |---|---|
@@ -50,7 +50,7 @@ Each review type maps to an ordered panel of lenses:
 
 ## Step 3: Apply Each Lens
 
-For each lens in order, inspect the changed files and produce:
+For each lens in order, inspect the work artifact and produce:
 
 - **verdict**: APPROVE, FLAG, or BLOCK
 - **assessment**: concise evaluation of what was reviewed and what is adequate
@@ -63,7 +63,7 @@ For each lens in order, inspect the changed files and produce:
 
 **Architecture** — separation of concerns, coupling, scalability, data flow, migration safety, backward compatibility
 
-**Security** — authentication, authorization, input validation, injection vectors, secrets and credential exposure, dependency vulnerabilities, encryption at rest and in transit. Scan changed files for hardcoded keys, tokens, passwords, API secrets, and connection strings.
+**Security** — authentication, authorization, input validation, injection vectors, secrets and credential exposure, dependency vulnerabilities, encryption at rest and in transit. Scan work artifacts for hardcoded keys, tokens, passwords, API secrets, and connection strings.
 
 **Performance** — response time impact, resource consumption, caching strategy, query complexity, concurrency safety
 
@@ -98,12 +98,12 @@ Produce a structured report conforming to `docs/review-board-report.schema.json`
 
 ## Hard Stop
 
-Block finalization if the recommendation is HOLD. Changes must not be committed or submitted for PR until all BLOCKs are resolved.
+Block finalization if the recommendation is HOLD. Work must not move forward until all BLOCKs are resolved.
 
 ## Rules
 
-- Evaluate only changed files and their immediate contracts
-- Do not speculate about code not inspected
-- Each lens must cite specific files or lines when raising concerns
+- Evaluate only the submitted work artifact and its immediate contracts
+- Do not speculate about work not inspected
+- Each lens must cite specific files, lines, or sections when raising concerns
 - Keep assessments factual and deterministic
 - The Security lens must scan for hardcoded secrets as part of its evaluation

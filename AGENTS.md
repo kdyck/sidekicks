@@ -17,14 +17,14 @@ Instructions for AI agents working in this repository.
 
 ## Review Workflow
 
-After completing implementation work, invoke the `review-board` skill. It:
+After completing a phase of work (brainstorming, planning, design, or implementation), invoke the `review-board` skill. It:
 
 1. Classifies the change into one of: Feature, Architecture, Security, Performance, UX/Accessibility, AI/ML, Legal/Compliance, Agent, Full
 2. Selects an ordered panel of review lenses
 3. Applies each lens producing APPROVE / FLAG / BLOCK verdicts
 4. Synthesizes a recommendation: SHIP, SHIP WITH CONDITIONS, or HOLD
 
-**Hard stop**: Do not commit or submit a PR when the recommendation is HOLD. Resolve all BLOCKs first.
+**Hard stop**: Do not finalize or move forward when the recommendation is HOLD. Resolve all BLOCKs first.
 
 ## Output Contracts
 
