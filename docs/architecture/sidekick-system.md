@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Sidekick skills provide structured review and safety gates for work output at any phase — brainstorming, planning, design, architecture, or implementation. Each skill applies domain-specific evaluation criteria and produces structured output.
+Sidekick skills provide structured review and safety gates for work output at any phase — brainstorming, planning, design, architecture, or implementation. Skills apply domain-specific evaluation criteria; some produce structured output while others provide behavior-shaping guidance.
 
 ## Current Skills
 

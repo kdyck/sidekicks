@@ -128,8 +128,16 @@ def main() -> None:
         assert_path_exists(relative_path)
 
     assert_file_contains("README.md", r"review-board", "README must document the review-board skill.")
+    assert_file_contains("README.md", r"commit-often", "README must document the commit-often skill.")
+    assert_file_contains("README.md", r"writing-discipline", "README must document the writing-discipline skill.")
     assert_file_contains("README.md", r"outline", "README must mention the outline SVG icon rule.")
     assert_file_contains("docs/architecture/sidekick-system.md", r"review-board", "Architecture doc must describe review-board.")
+    assert_file_contains("docs/architecture/sidekick-system.md", r"commit-often", "Architecture doc must describe commit-often.")
+    assert_file_contains(
+        "docs/architecture/sidekick-system.md",
+        r"writing-discipline",
+        "Architecture doc must describe writing-discipline.",
+    )
     assert_file_contains(
         "docs/architecture/sidekick-system.md",
         r"review-board-report\.schema\.json",
