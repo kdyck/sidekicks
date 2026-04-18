@@ -1,19 +1,6 @@
 # Sidekick Skills
 
-Your personal review board for coding agent workflows. Sidekicks review your work at any phase — brainstorming, planning, design, or implementation — catching gaps before you move forward.
-
-## How It Works
-
-When you finish a phase of work, invoke a sidekick skill to review the output. It doesn't matter if the output is a brainstorm, a plan, an architecture decision, or a code change — the review board adapts.
-
-1. You complete a phase of work.
-2. The sidekick classifies what kind of work it is.
-3. A panel of domain-specific lenses reviews the output.
-4. Each lens produces a verdict: **APPROVE**, **FLAG**, or **BLOCK**.
-5. A final recommendation is synthesized: **SHIP**, **SHIP WITH CONDITIONS**, or **HOLD**.
-6. If the recommendation is HOLD, work stops until all blockers are resolved.
-
-No work moves forward with an unresolved BLOCK.
+Skills for coding agent workflows — structured review, commit hygiene, and writing discipline.
 
 ## Installation
 
@@ -51,18 +38,18 @@ Clone the repository and symlink or copy the `skills/` directory into your proje
 git clone https://github.com/kdyck/sidekicks.git
 ```
 
-## What's Inside
+## Skills
 
 ### Review
 
-- **review-board** — Multi-lens review gate. Classifies your work into one of nine types (Feature, Architecture, Security, Performance, UX/Accessibility, AI/ML, Legal/Compliance, Agent, or Full), selects an ordered panel of review lenses, and produces a structured report with a final recommendation. Works on brainstorms, plans, designs, and code alike. The Security lens includes secret scanning.
+- **review-board** — Multi-lens review gate. Triggers at the end of any phase — brainstorm, plan, design, architecture decision, or implementation. Classifies the work, selects a panel of domain-specific lenses, and produces a structured report with a final recommendation: SHIP, SHIP WITH CONDITIONS, or HOLD. No work moves forward with an unresolved BLOCK.
 
 ### Workflow
 
 - **commit-often** — Lightweight nudge that instructs agents to commit at natural stopping points throughout a session rather than only at the end. Agent uses its own judgment on cadence unless the user specifies otherwise.
-- **writing-discipline** — Proactive writing discipline skill. Instructs agents to apply "signal over decoration" when writing any prose: avoid decorative dividers, nested bullets, bold overuse, and headers on content too short to need navigation. Structure only when it earns its place.
+- **writing-discipline** — Instructs agents to apply "signal over decoration" when writing any prose. Avoid decorative dividers, nested bullets, bold overuse, and headers on content too short to need navigation. Structure only when it earns its place.
 
-### Lenses
+## Review Lenses
 
 The review board selects from these lenses based on what you're reviewing:
 
@@ -81,8 +68,7 @@ The review board selects from these lenses based on what you're reviewing:
 - Review early, review often — don't wait until code is written
 - Structured over ad-hoc — every review follows the same disciplined process
 - Evidence over opinions — lenses cite specific concerns, not vague feelings
-- No work ships with an unresolved BLOCK
-- Future UI assets use wire or outline-style SVG icons only
+- UI assets use wire or outline-style SVG icons only
 
 ## Contributing
 
