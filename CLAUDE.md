@@ -15,7 +15,7 @@ tests/validate_sidekicks.py     — repo validation script
 
 ## Current Skills
 
-- **review-board**: multi-lens review gate that classifies changes, applies domain-specific lenses (Engineering, Architecture, Security, Performance, UX/Accessibility, AI/ML, Compliance, Finance, Agent Governance), and produces a verdict (SHIP / SHIP WITH CONDITIONS / HOLD)
+- **review-board**: multi-lens review gate for any phase of work (brainstorming, planning, design, implementation). Classifies the work, applies domain-specific lenses (Engineering, Architecture, Security, Performance, UX/Accessibility, AI/ML, Compliance, Finance, Agent Governance), and produces a verdict (SHIP / SHIP WITH CONDITIONS / HOLD)
 
 ## Rules
 
