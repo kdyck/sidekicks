@@ -1,6 +1,6 @@
 ---
 name: review-board
-description: Use when completed work output needs multi-perspective review before moving forward
+description: Use when any phase of work is done — brainstorm, plan, design, architecture decision, or implementation — before moving to the next phase
 ---
 
 # Review Board
@@ -50,7 +50,9 @@ Each review type maps to an ordered panel of lenses:
 
 ## Step 3: Apply Each Lens
 
-For each lens in order, inspect the work artifact and produce:
+If subagents are available, dispatch one per selected lens and run them in parallel. Only dispatch lenses from the selected panel — do not spin up lenses not in the panel. If subagents are unavailable, apply each lens in order within the current session.
+
+For each lens, inspect the work artifact and produce:
 
 - **verdict**: APPROVE, FLAG, or BLOCK
 - **assessment**: concise evaluation of what was reviewed and what is adequate

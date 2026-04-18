@@ -60,6 +60,7 @@ git clone https://github.com/kdyck/sidekicks.git
 ### Workflow
 
 - **commit-often** — Lightweight nudge that instructs agents to commit at natural stopping points throughout a session rather than only at the end. Agent uses its own judgment on cadence unless the user specifies otherwise.
+- **writing-discipline** — Proactive writing discipline skill. Instructs agents to apply "signal over decoration" when writing any prose: avoid decorative dividers, nested bullets, bold overuse, and headers on content too short to need navigation. Structure only when it earns its place.
 
 ### Lenses
 

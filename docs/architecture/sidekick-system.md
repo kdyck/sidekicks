@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Sidekick skills provide structured review and safety gates for work output at any phase — brainstorming, planning, design, architecture, or implementation. Each skill applies domain-specific evaluation criteria and produces structured output.
+Sidekick skills provide structured review and safety gates for work output at any phase — brainstorming, planning, design, architecture, or implementation. Skills apply domain-specific evaluation criteria; some produce structured output while others provide behavior-shaping guidance.
 
 ## Current Skills
 
@@ -15,6 +15,10 @@ The Security lens includes secret scanning — inspecting work artifacts for har
 ### commit-often
 
 Lightweight behavior-shaping skill. When loaded, instructs the agent to commit at natural stopping points during a session — subtask complete, test passes, context shifting to a different area, or before a risky structural change. Produces no structured output. Cadence is advisory; agent uses judgment unless the user specifies otherwise.
+
+### writing-discipline
+
+Proactive behavior-shaping skill. When loaded, instructs the agent to apply "signal over decoration" before writing any prose — documentation, specs, plans, implementation instructions, or code comments. Produces no structured output. No hard-stop condition; guidance is internalized, not a gate.
 
 ## Control Flow
 
