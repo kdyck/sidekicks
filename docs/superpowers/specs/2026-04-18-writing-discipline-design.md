@@ -5,11 +5,11 @@
 
 ## Problem
 
-Coding agents waste tokens and reduce readability by applying unnecessary formatting and decoration when writing docs, specs, plans, implementation instructions, and code comments. Common offenders: decorative dividers, nested bullet lists, bold overuse, and headers on content too short to need navigation. The output looks structured but the formatting carries no information — it just adds noise and token cost.
+Coding agents waste tokens and reduce readability by applying unnecessary formatting and decoration when writing docs, specs, plans, implementation instructions, and code comments. The output looks structured but the formatting carries no information — it just adds noise and token cost.
 
 ## Audience
 
-Coding agents writing any prose for a human to read: documentation, specs, plans, implementation instructions, code comments.
+Coding agents writing any prose a human will read.
 
 ## Goal
 
@@ -17,46 +17,45 @@ A proactive skill agents internalize before writing, so the first draft is alrea
 
 ## Approach
 
-Option C: principle + quick reference.
-
-One core principle ("signal over decoration") explained in plain English, followed by a compact banned-patterns table with acceptable alternatives, followed by short rules for when structure is actually earned.
+One core principle ("signal over decoration") explained in plain English, followed by prose-form rules for what to avoid and when structure is actually earned. No tables — a table listing banned formatting is the irony the skill exists to prevent.
 
 ## Core Principle
 
-**Signal over decoration.** Signal is content that carries meaning. Decoration is formatting that makes something *look* structured without adding information. If removing a formatting element loses no information, remove it.
+**Signal over decoration.** Signal is content that carries meaning. Decoration is formatting that makes something look structured without adding information. If removing a formatting element loses no information, remove it.
 
 ## Skill Design
 
 **Name:** `writing-discipline`
 
-**Routing description:** Triggers whenever an agent is about to write documentation, specs, plans, implementation instructions, or code comments — any prose intended for a human to read.
+**Routing description:** Triggers whenever an agent is about to write any prose a human will read — documentation, specs, plans, implementation instructions, or code comments.
 
-**Content sections:**
+**Content:**
 
-1. **Principle** — plain-English explanation of signal over decoration (2-3 sentences)
-2. **Banned patterns table** — common offenders with acceptable alternatives:
-   - Decorative dividers (`═══`, `---` used as decoration, `***`)
-   - Nested bullet lists (more than one level deep)
-   - Bold overuse (bolding non-critical words for visual weight)
-   - Headers on short content (header + 1-2 lines = just write prose)
-   - Redundant parenthetical labels ("(unchanged)", "(see above)", "(optional)")
-   - Properties as sub-bullets when they fit on one line
-3. **When structure is earned** — short rules for bullets, headers, bold, tables:
-   - Bullets: 3+ genuinely parallel, discrete items with no natural prose flow
-   - Headers: content long enough that a reader needs to navigate or skip sections
-   - Bold: terms so critical that missing them breaks understanding
-   - Tables: comparison across 2+ dimensions where the grid IS the content
-   - IMPORTANT/NOTE callouts: genuinely critical information the reader must not miss
+- Principle: plain-English explanation of signal over decoration (2-3 sentences)
+- What to avoid: prose-form list of banned patterns — decorative dividers, nested bullets beyond one level, bold used for visual weight rather than critical terms, headers on content too short to need navigation, redundant parenthetical labels, properties as sub-bullets when they fit inline
+- When structure is earned: bullets for 3+ genuinely parallel items with no natural prose flow; headers when content is long enough to need navigation; bold only for terms so critical that missing them breaks understanding; tables only when the grid IS the content (comparison across 2+ dimensions); IMPORTANT/NOTE callouts for genuinely critical information the reader must not miss
 
-**Tone:** The skill must practice what it preaches — no decorative dividers, no nested bullets, no unnecessary headers.
+**Output section:** No structured output. This skill shapes how prose is written.
+
+**Hard Stop section:** None. Guidance is internalized, not a gate.
+
+**Tone:** The skill must be a model of the principle it teaches — written in prose, no decorative dividers, no unnecessary headers.
+
+## Contract Discipline
+
+Shipping this skill requires updating all of the following in the same commit:
+- `skills/writing-discipline/SKILL.md`
+- `tests/validate_sidekicks.py` — add `"writing-discipline"` to `skill_names`
+- `README.md` — add entry under Workflow section
+- `docs/architecture/sidekick-system.md` — add description under Current Skills
 
 ## Out of Scope
 
 - Prose quality rules (covered by `writing-clearly-and-concisely`)
-- Before/after examples (adds length; the principle + table is sufficient)
 - Commit message formatting (separate concern)
+- Before/after examples (the principle and rules are sufficient)
 
 ## Success Criteria
 
-- Agents produce clean first drafts without decorative dividers, excessive nesting, or structure that carries no information
+- Agents produce clean first drafts without decorative formatting that carries no information
 - The skill file itself is a model of the principle it teaches
