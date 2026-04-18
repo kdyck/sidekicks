@@ -16,6 +16,10 @@ The Security lens includes secret scanning — inspecting work artifacts for har
 
 Lightweight behavior-shaping skill. When loaded, instructs the agent to commit at natural stopping points during a session — subtask complete, test passes, context shifting to a different area, or before a risky structural change. Produces no structured output. Cadence is advisory; agent uses judgment unless the user specifies otherwise.
 
+### writing-discipline
+
+Proactive behavior-shaping skill. When loaded, instructs the agent to apply "signal over decoration" before writing any prose — documentation, specs, plans, implementation instructions, or code comments. Produces no structured output. No hard-stop condition; guidance is internalized, not a gate.
+
 ## Control Flow
 
 1. Complete a phase of work (brainstorm, plan, design, or implementation).

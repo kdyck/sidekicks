@@ -99,6 +99,7 @@ def main() -> None:
     skill_names = [
         "review-board",
         "commit-often",
+        "writing-discipline",
     ]
 
     assert_path_exists(".gitignore")
