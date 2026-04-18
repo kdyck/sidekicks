@@ -57,6 +57,10 @@ git clone https://github.com/kdyck/sidekicks.git
 
 - **review-board** — Multi-lens review gate. Classifies your work into one of nine types (Feature, Architecture, Security, Performance, UX/Accessibility, AI/ML, Legal/Compliance, Agent, or Full), selects an ordered panel of review lenses, and produces a structured report with a final recommendation. Works on brainstorms, plans, designs, and code alike. The Security lens includes secret scanning.
 
+### Workflow
+
+- **commit-often** — Lightweight nudge that instructs agents to commit at natural stopping points throughout a session rather than only at the end. Agent uses its own judgment on cadence unless the user specifies otherwise.
+
 ### Lenses
 
 The review board selects from these lenses based on what you're reviewing:
