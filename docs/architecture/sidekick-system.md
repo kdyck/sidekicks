@@ -12,6 +12,10 @@ Multi-lens review gate for any phase of work. Classifies the work output, select
 
 The Security lens includes secret scanning — inspecting work artifacts for hardcoded keys, tokens, passwords, and credentials.
 
+### commit-often
+
+Lightweight behavior-shaping skill. When loaded, instructs the agent to commit at natural stopping points during a session — subtask complete, test passes, context shifting to a different area, or before a risky structural change. Produces no structured output. Cadence is advisory; agent uses judgment unless the user specifies otherwise.
+
 ## Control Flow
 
 1. Complete a phase of work (brainstorm, plan, design, or implementation).
