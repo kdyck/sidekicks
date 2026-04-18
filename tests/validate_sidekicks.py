@@ -98,6 +98,7 @@ def assert_review_board_shape(report: dict[str, object], message_prefix: str) ->
 def main() -> None:
     skill_names = [
         "review-board",
+        "commit-often",
     ]
 
     assert_path_exists(".gitignore")
